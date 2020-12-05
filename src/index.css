@@ -1,13 +1,145 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* ------------------------
+    General
+------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=Lato:wght@400;700;900&display=swap');
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 500; 
+  font-size: 16px;
+  color: #333333;
+  background-color: #fffef2;
+  height: 200vh;
+}
+
+section {
+  display: block;
+}
+
+img {
+  max-width: 100% !important;
+}
+
+button:focus {
+  outline: none !important;
+}
+
+/* ------------------------
+    Typography
+------------------------*/
+h1, h2, h3, h4, h5, h6{font-family: 'Cabin', sans-serif; font-weight:normal; margin-top: 0px; margin-bottom: 0px; letter-spacing: 1px;}
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color: inherit; }
+h1 { font-family: 'Cabin', sans-serif; font-size: 64px; font-style: normal; font-weight: 700; color: #333333;}
+h2 { font-family: 'Cabin', sans-serif; font-size: 56px; font-style: normal; font-weight: 600; color: #333333;}
+h3 { font-family: 'Cabin', sans-serif; font-size: 48px; font-style: normal; font-weight: 600; color: #333333;}
+h4 { font-family: 'Cabin', sans-serif; font-size: 40px; font-style: normal; font-weight: 600; color: #333333;}
+h5 { font-family: 'Cabin', sans-serif; font-size: 30px; font-style: normal; font-weight: 600; color: #333333;}
+h6 { font-family: 'Cabin', sans-serif; font-size: 24px; font-style: normal; font-weight: 600; color: #333333;}
+
+a {
+  color: #333333;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #333333;
+  text-decoration: none;
+}
+
+/*
+  Hyperlinks underline
+*/
+.underline {
+  display: inline;
+  position: relative;
+  overflow: hidden;
+}
+
+.underline:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 100%;
+  bottom: -2px;
+  background: #000;
+  height: 1px;
+  transition-property: left right;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+
+.underline:hover:after,
+.underline:focus:after,
+.underline:active:after {
+  right: 0;
+}
+
+/* 
+    Banner section
+*/
+#banner {
+  color: #fffef2;
+  background: #252525;
+  text-align: center;
+  height: 5vh;
+}
+
+#banner span {
+  cursor: pointer;
+  padding: 0;
+  text-align: center;
+  margin: 0;
+  transition: 0.3s;
+  padding-bottom: 4px;
+  border-bottom-color: transparent; 
+  border-bottom-style: solid; 
+  border-bottom-width: 1px; 
+  width: fit-content; 
+  text-align: center;
+}
+
+#banner span:hover {
+  padding-bottom: 4px;
+  border-bottom-color: #fffef2; 
+  border-bottom-style: solid; 
+  border-bottom-width: 1px; 
+  width: fit-content; 
+  text-align: center;
+}
+
+#banner span i {
+  font-size: 12px;
+  color: #dddcd3;
+  margin-left: 14px;
+}
+
+/* 
+    Navbar
+*/
+#header ul {
+  display: flex;
+}
+
+#header ul li {
+  list-style-type: none;
+  padding: 24px 16px;
+  font-weight: 500;
+}
+
+header {
+  background: #f5b335;
+  height: 40px;
+  position: fixed;
+  transition: top 0.2s ease-in-out;
+  width: 100%;
+}
+
+.nav-up {
+  top: -40px;
 }
