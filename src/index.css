@@ -611,27 +611,29 @@ main .container-fluid {
 /* 
     Chat Btn
 */
+button.chat-btn {
+  border: 0;
+  background: transparent;
+}
 
-/* 
-    BACK TO TOP
-*/
-.back-to-top:hover {
+.chat-btn:hover {
 	color: #fff !important;
-	background-color: #e74c3c;
+	background-color: #333333 !important  ;
 	text-decoration: none;
 }
  
-.back-to-top {
+.chat-btn {
 	display: none;
 	position: fixed;
-	bottom: 20px;
-	right: 230px;
-	width: 3.2rem;
-	height: 3.2rem;
-	line-height: 3.2rem;
+	bottom: 90px;
+	right: 50px;
+  width: 2.2rem;
+  z-index: 30;
+	height: 2.2rem;
+	line-height: 2.1rem;
 	font-size: 1.4rem;
 	color: #fff;
-	background-color: #CC0001;
+	background-color: #333333 !important;
 	text-decoration: none;
 	border-radius: 3.2rem;
 	text-align: center;
