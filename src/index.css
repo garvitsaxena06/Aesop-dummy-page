@@ -423,3 +423,217 @@ main .container-fluid {
 #howtouse .description h6 {
   font-size: 14px;
 }
+
+/* 
+    Footer
+*/
+#footer {
+  background-color: #252525;
+  color: #fffef2;
+}
+
+#footer .footer-content {
+  padding: 32px 48px;
+}
+
+#footer .footer-content h5 {
+  color: #fffef2;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 600px) {
+  #footer .footer-content{
+    padding: 32px 24px !important;
+  }
+}
+
+#footer ::-webkit-input-placeholder {
+  font-family: "Montserrat", sans-serif !important;
+  font-size: 16px;
+  color: #fffef2;
+  background-color: #252525;
+  align-items: center !important;
+  align-content: center !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+#footer .email-box {
+  background: transparent;
+  border: 1px solid #fffef2;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+#footer .input-field {
+  border: 0;
+  background-color: #252525;
+  color: #fffef2;
+  border-radius: 5px;
+}
+
+#footer .input-field:focus{
+  box-shadow: 0 0 1px 0px #252525 !important;
+  border: 0;
+  outline: none;
+}
+
+#footer .submit-btn{
+  background-color: transparent;
+  color: #ffffff;
+  width: 100%;
+  border: 0;
+  font-size: 16px;
+  height: 100%;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+  #footer .submit-btn {
+    padding: 4px 0;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+  }
+}
+
+#footer .invalid-feedback {
+  text-align: center;
+}
+
+#footer .heading {
+  padding-bottom: 16px;
+  margin-top: 8px;
+  border-bottom-color: #fffef2; 
+  border-bottom-style: solid; 
+  color: #fffef2;
+  border-bottom-width: 1px; 
+  width: 100%; 
+  border-radius: 0;
+  font-size: 15px;
+}
+
+#footer ul {
+  margin-top: 18px;
+}
+
+#footer ul li {
+  list-style-type: none;
+  margin: 12px 0;
+}
+
+#footer ul li a {
+  color: #fffef2;
+}
+
+#footer ul li a i {
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+/* 
+    Carousel section
+*/
+#carousel-section .item {
+  padding: 0 24px;
+}
+
+#carousel-section .item .align-items-end {
+  height: 50vh;
+}
+
+@media only screen and (max-width: 768px) {
+  #carousel-section .item .align-items-end {
+    height: 32vh;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #carousel-section .item .align-items-end {
+    height: 42vh;
+  }
+}
+
+#carousel-section .item .align-items-end img {
+  width: 90%;
+}
+
+#carousel-section .item h6 {
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+#carousel-section .item .mx-auto:hover h6 {
+  text-decoration: underline;
+}
+
+#carousel-section .owl-nav {
+  display: block !important;
+}
+
+#carousel-section .owl-theme .owl-dots {
+  display: block;
+}
+
+#carousel-section .owl-carousel .owl-nav button.owl-next span, #carousel-section .owl-carousel .owl-nav button.owl-prev span {
+  visibility: hidden;
+}
+
+#carousel-section .owl-carousel .owl-nav button.owl-next::after {
+  content: '→';
+  font-size: 24px;
+  margin-left: -4px;
+}
+
+#carousel-section .owl-carousel .owl-nav button.owl-prev::after {
+  content: '←';
+  font-size: 24px;
+  margin-left: -2px;
+}
+
+#carousel-section .owl-carousel .owl-nav button.owl-prev, #carousel-section .owl-carousel .owl-nav button.owl-next {
+  background-color: #fff;
+  width: 40px;
+  height: 40px;
+  color: #DED5C8;
+  border: 2px solid #DED5C8;
+  border-radius: 50%;
+}
+
+#carousel-section .owl-carousel .owl-nav button.owl-prev:hover, #carousel-section .owl-carousel .owl-nav button.owl-next:hover {
+  background-color: #DED5C8;
+  color: #fff;
+}
+
+/* 
+    Chat Btn
+*/
+
+/* 
+    BACK TO TOP
+*/
+.back-to-top:hover {
+	color: #fff !important;
+	background-color: #e74c3c;
+	text-decoration: none;
+}
+ 
+.back-to-top {
+	display: none;
+	position: fixed;
+	bottom: 20px;
+	right: 230px;
+	width: 3.2rem;
+	height: 3.2rem;
+	line-height: 3.2rem;
+	font-size: 1.4rem;
+	color: #fff;
+	background-color: #CC0001;
+	text-decoration: none;
+	border-radius: 3.2rem;
+	text-align: center;
+	cursor: pointer;
+}
