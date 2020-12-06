@@ -11,6 +11,8 @@ import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import ChatBtn from './components/ChatBtn'
+import AOS from 'aos';
+import "aos/dist/aos.css";
 
 class App extends Component {
   constructor() {
@@ -30,6 +32,12 @@ class App extends Component {
     }
   }
 
+  componentDidMount() {
+    AOS.init({
+      duration : 2000
+    });
+  }
+
   render() {
     return (
       <React.Fragment>
@@ -40,7 +48,7 @@ class App extends Component {
             <div className="container-fluid">
               <div className="row">
                 
-                <div className="col-lg-8">
+                <div className="col-lg-8" data-aos="fade-left">
                   <div className="d-flex flex-column">
                     <div className="">
                       <img width="100" className="main-logo" src={logo} alt="Aesop logo"/>
@@ -53,7 +61,7 @@ class App extends Component {
                 </div>
   
                 <div className="col-lg-4">
-                  <div className="product-info">
+                  <div className="product-info" data-aos="fade-down">
                     <nav aria-label="breadcrumb">
                       <ol className="breadcrumb">
                         <li className="breadcrumb-item"><a href="/#" className="underline">Body & Hand</a></li>
@@ -81,7 +89,7 @@ class App extends Component {
             </div>
           </section>
   
-          <section id="consultation" className="section">
+          <section data-aos="zoom-in-up" data-aos-duration="1000" id="consultation" className="section">
             <div className="container-fluid text-center">
               <a href="/#">
                 <h6 className="underline">Book a video consultation</h6>
@@ -90,7 +98,7 @@ class App extends Component {
             </div>
           </section>
   
-          <section id="howtouse" className="section">
+          <section id="howtouse" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="250" data-aos-offset="0" className="section">
             <div className="">
               <div className="row">
   
@@ -122,7 +130,7 @@ class App extends Component {
             </div>
           </section>
 
-          <section id="carousel-section" className="section">
+          <section id="carousel-section" data-aos="zoom-in" className="section">
             <div className="container-fluid">
               <div className="row">
 
