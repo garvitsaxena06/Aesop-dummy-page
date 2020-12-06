@@ -130,7 +130,7 @@ class App extends Component {
             </div>
           </section>
 
-          <section id="carousel-section" data-aos="zoom-in" className="section">
+          <section id="carousel-section" data-aos="zoom-in" data-aos-duration="3500" className="section">
             <div className="container-fluid">
               <div className="row">
 
