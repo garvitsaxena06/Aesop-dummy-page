@@ -48,13 +48,13 @@ class App extends Component {
             <div className="container-fluid">
               <div className="row">
                 
-                <div className="col-lg-8" data-aos="fade-left">
+                <div className="col-lg-8">
                   <div className="d-flex flex-column">
                     <div className="">
                       <img width="100" className="main-logo" src={logo} alt="Aesop logo"/>
                     </div>
                     <div className="ml-auto">
-                      <img src={product1} alt="Product"/>
+                      <img src={product1} data-aos="fade-right" alt="Product"/>
                       <p>100mL</p>
                     </div>
                   </div>
