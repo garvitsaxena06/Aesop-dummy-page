@@ -6,15 +6,14 @@
 /* ------------------------
     General
 ------------------------*/
-@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=Lato:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;600;700;800&display=swap');
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 500; 
-  font-size: 16px;
+  font-size: 14px;
   color: #333333;
   background-color: #fffef2;
-  height: 200vh;
 }
 
 section {
@@ -32,14 +31,14 @@ button:focus {
 /* ------------------------
     Typography
 ------------------------*/
-h1, h2, h3, h4, h5, h6{font-family: 'Cabin', sans-serif; font-weight:normal; margin-top: 0px; margin-bottom: 0px; letter-spacing: 1px;}
+h1, h2, h3, h4, h5, h6{font-family: 'Montserrat', sans-serif; font-weight:normal; margin-top: 0px; margin-bottom: 0px; letter-spacing: 1px;}
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color: inherit; }
-h1 { font-family: 'Cabin', sans-serif; font-size: 64px; font-style: normal; font-weight: 700; color: #333333;}
-h2 { font-family: 'Cabin', sans-serif; font-size: 56px; font-style: normal; font-weight: 600; color: #333333;}
-h3 { font-family: 'Cabin', sans-serif; font-size: 48px; font-style: normal; font-weight: 600; color: #333333;}
-h4 { font-family: 'Cabin', sans-serif; font-size: 40px; font-style: normal; font-weight: 600; color: #333333;}
-h5 { font-family: 'Cabin', sans-serif; font-size: 30px; font-style: normal; font-weight: 600; color: #333333;}
-h6 { font-family: 'Cabin', sans-serif; font-size: 24px; font-style: normal; font-weight: 600; color: #333333;}
+h1 { font-family: 'Montserrat', sans-serif; font-size: 64px; font-style: normal; font-weight: 700; color: #333333;}
+h2 { font-family: 'Montserrat', sans-serif; font-size: 56px; font-style: normal; font-weight: 600; color: #333333;}
+h3 { font-family: 'Montserrat', sans-serif; font-size: 48px; font-style: normal; font-weight: 600; color: #333333;}
+h4 { font-family: 'Montserrat', sans-serif; font-size: 40px; font-style: normal; font-weight: 600; color: #333333;}
+h5 { font-family: 'Montserrat', sans-serif; font-size: 30px; font-style: normal; font-weight: 600; color: #333333;}
+h6 { font-family: 'Montserrat', sans-serif; font-size: 24px; font-style: normal; font-weight: 600; color: #333333;}
 
 a {
   color: #333333;
@@ -81,13 +80,45 @@ a:hover {
 }
 
 /* 
+    Sections
+*/
+/* 
+    Section and section header
+*/
+.section {
+  margin: 8% 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .section {
+    margin: 16% 0;
+  }
+}
+
+main .container-fluid {
+  padding: 0 48px !important;
+}
+
+@media only screen and (max-width: 600px) {
+  main .container-fluid {
+    padding: 0 24px !important;
+  }
+}
+
+/* 
     Banner section
 */
 #banner {
   color: #fffef2;
   background: #252525;
   text-align: center;
-  height: 5vh;
+  height: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+  #banner {
+    height: 65px;
+  }
 }
 
 #banner span {
@@ -122,24 +153,273 @@ a:hover {
 /* 
     Navbar
 */
-#header ul {
+#header .navbar {
+  width: 100%;
+  padding: 24px 16px;
   display: flex;
+  position: fixed;
+  top: 30;
+  transition: top 0.6s;
 }
 
-#header ul li {
-  list-style-type: none;
+#header .navbarScroll {
+  width: 100%;
   padding: 24px 16px;
+  display: flex;
+  position: fixed;
+  top: 0;
+  background-color: #fffef2;
+  border-bottom: 1px solid rgba(51,51,51,.2);
+  z-index: 10;
+  transition: top 0.6s;
+}
+
+#header .navbar--hidden {
+  top: -80px;
+}
+
+#header nav div a {
+  margin: 20px 16px;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#headerMobile .navbar {
+  width: 100%;
+  padding: 24px 8px;
+  display: flex;
+  position: fixed;
+  top: 30;
+  transition: top 0.6s;
+}
+
+#headerMobile .navbarScroll {
+  width: 100%;
+  padding: 24px 8px;
+  display: flex;
+  position: fixed;
+  top: 0;
+  background-color: #fffef2;
+  border-bottom: 1px solid rgba(51,51,51,.2);
+  z-index: 10;
+  transition: top 0.6s;
+}
+
+#headerMobile .navbar--hidden {
+  top: -80px;
+}
+
+#headerMobile nav div a {
+  padding: 20px 16px;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#headerMobile nav div a img {
+  width: 80px;
+}
+
+#headerMobile nav div button {
+  background-color: transparent;
+  border: 0;
+}
+
+/* 
+    Mobile sidebar
+*/
+#headerMobile .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  background-color: #fffef2;
+  overflow-x: hidden;
+  padding-top: 24px;
+  text-align: left;
+}
+
+#headerMobile .sidenav button {
+  border: 0;
+  background: transparent;
+}
+
+#headerMobile .sidenav button i {
+  font-size: 14px;
+  color: #333333;
+}
+
+#headerMobile .sidenav .d-flex {
+  padding: 0 16px;
+  margin-bottom: 48px;
+}
+
+#headerMobile .sidenav .d-flex a {
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  color: #333333;
+  padding: 0 !important;
+  margin: 0 !important;
   font-weight: 500;
 }
 
-header {
-  background: #f5b335;
-  height: 40px;
-  position: fixed;
-  transition: top 0.2s ease-in-out;
+#headerMobile .sidenav .d-flex img {
+  width: 80px;
+}
+
+#headerMobile .sidenav a {
+  padding: 8px 8px 4px 16px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+  color: #333333;
+  display: block;
+  transition: 0.3s;
+}
+
+#headerMobile .sidenav a:hover{
+  color: #333333;
+}
+
+#headerMobile .sidenav .sub-links a {
+  font-weight: 500;
+  color: #575757;
+  font-size: 14px;
+}
+
+#headerMobile .sidenav .footer-links {
+  position: absolute;
+  bottom: 10px;
   width: 100%;
 }
 
-.nav-up {
-  top: -40px;
+@media screen and (max-height: 450px) {
+  #headerMobile .sidenav {padding-top: 15px;}
+  #headerMobile .sidenav a {font-size: 18px;}
+}
+
+/* 
+    Product description section
+*/
+@media only screen and (max-width: 600px) {
+  #product-desc .d-flex img.main-logo {
+    display: none;
+  }
+}
+
+#product-desc .ml-auto p {
+  text-align: center;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 768px) {
+  #product-desc .ml-auto {
+    margin: 0 auto !important;
+  }
+  #product-desc .ml-auto img {
+    width: 500px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  #product-desc .ml-auto img {
+    width: 625px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #product-desc .product-info {
+    width: 80%;
+  }
+}
+
+#product-desc .breadcrumb {
+  background-color: transparent;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#product-desc .breadcrumb-item+.breadcrumb-item::before {
+  content: "•" !important;
+  font-size: 14px;
+}
+
+#product-desc .product-info .content h6 {
+  font-size: 14px;
+}
+
+#product-desc .product-info .btn {
+  padding: 18px 0;
+  font-size: 14px;
+  margin: 24px 0;
+}
+
+/* 
+    Consultation section
+*/
+#consultation div.container-fluid {
+  width: 30%;
+}
+
+@media only screen and (max-width: 768px) {
+  #consultation div.container-fluid {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #consultation div.container-fluid {
+    width: 100%;
+  }
+}
+
+#consultation h6 {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* 
+    How to use section
+*/
+#howtouse {
+  background: #f6f5e8;
+}
+
+#howtouse div.quote-img {
+  background: #ded5cb;
+}
+
+#howtouse .row {
+  margin: 0 !important;
+}
+
+#howtouse div.align-items-center {
+  height: 100%;
+}
+
+#howtouse .description {
+  padding: 0 16%;
+}
+
+@media only screen and (max-width: 992px) {
+  #howtouse .description {
+    margin-top: 16%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #howtouse .description {
+    padding: 0 8%;
+  }
+}
+
+#howtouse .description h5 {
+  margin-top: 12px;
+  font-weight: 500;
+}
+
+#howtouse .description h6 {
+  font-size: 14px;
 }
